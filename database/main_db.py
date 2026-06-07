@@ -1,4 +1,3 @@
-#@cantarellabots
 """
 main_db.py — Database operations for the main controller bot.
 
@@ -8,10 +7,8 @@ Manages the registry of user-created bots and main bot users.
 from datetime import datetime, timezone
 from database.mongo import get_db
 from config import LOGGER
-#@cantarellabots
 log = LOGGER(__name__)
 
-#@cantarellabots
 class MainDB:
     """Database operations for the main controller bot."""
 
@@ -214,4 +211,3 @@ class MainDB:
         """Get the last bot creation timestamp for a user."""
         doc = await self.cooldowns.find_one({"_id": user_id})
         return doc["timestamp"] if doc else None
-#@cantarellabots
