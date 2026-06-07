@@ -1,4 +1,4 @@
-#@cantarellabots
+
 
 import motor.motor_asyncio
 from config import MONGO_URI, MONGO_DB_NAME, LOGGER
@@ -25,4 +25,3 @@ def get_db() -> motor.motor_asyncio.AsyncIOMotorDatabase:
         _db = get_motor_client()[MONGO_DB_NAME]
         log.info(f"Using database: {MONGO_DB_NAME}")
     return _db
-#@cantarellabots
