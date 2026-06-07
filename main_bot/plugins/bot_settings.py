@@ -1,5 +1,3 @@
-#@cantarellabots
-
 import re
 from pyrogram import Client, filters
 from pyrogram.types import (
@@ -8,7 +6,6 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
 )
-#@cantarellabots
 from config import API_ID, API_HASH, LOGGER
 from database.main_db import MainDB
 from database.worker_db import WorkerDB
@@ -18,13 +15,11 @@ from utils.security import encrypt_token, decrypt_token, mask_api_key
 log = LOGGER(__name__)
 main_db = MainDB()
 
-#@cantarellabots
 # Helper to get creation state (shared with create_bot.py)
 def _get_state():
     from main_bot.plugins.create_bot import _creation_state
     return _creation_state
 
-#@cantarellabots
 # =============================================================================
 # HELPER: Verify bot ownership
 # =============================================================================
