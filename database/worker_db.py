@@ -1,5 +1,3 @@
-#@cantarellabots
-
 from database.mongo import get_db
 from config import LOGGER
 
