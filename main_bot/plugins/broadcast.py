@@ -3,10 +3,8 @@ from pyrogram.types import Message
 import asyncio
 from config import OWNER_ID, LOGGER
 from database.main_db import MainDB
-#@cantarellabots
 log = LOGGER(__name__)
 main_db = MainDB()
-#@cantarellabots
 @Client.on_message(filters.command("broadcast") & filters.private & filters.user(OWNER_ID))
 async def main_bot_broadcast(client: Client, message: Message):
     if not message.reply_to_message:
@@ -40,4 +38,3 @@ async def main_bot_broadcast(client: Client, message: Message):
         f"<b>Success:</b> {success}\n"
         f"<b>Failed:</b> {failed}"
     )
-#@cantarellabots
