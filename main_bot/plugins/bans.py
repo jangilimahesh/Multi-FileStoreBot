@@ -2,9 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import OWNER_ID
 from database.main_db import MainDB
-#@cantarellabots
 main_db = MainDB()
-#@cantarellabots
 @Client.on_message(filters.command("ban") & filters.private & filters.user(OWNER_ID))
 async def ban_user_main(client: Client, message: Message):
     if len(message.command) < 2:
@@ -30,4 +28,3 @@ async def unban_user_main(client: Client, message: Message):
         await message.reply(f"<b>✅ User {target_id} has been unbanned from the main bot.</b>")
     except ValueError:
         await message.reply("<b>❌ Invalid User ID.</b>")
-#@cantarellabots
