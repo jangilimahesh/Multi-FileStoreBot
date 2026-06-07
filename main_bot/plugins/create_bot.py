@@ -1,5 +1,3 @@
-#@cantarellabots
-
 import asyncio
 from datetime import datetime, timezone
 
@@ -10,7 +8,6 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
 )
-#@cantarellabots
 from config import MAX_BOTS_PER_USER, BOT_CREATION_COOLDOWN, API_ID, API_HASH, LOGGER
 from database.main_db import MainDB
 from utils.helpers import validate_bot_token, send_main_log
@@ -22,7 +19,6 @@ main_db = MainDB()
 # Track users currently in bot creation flow
 _creation_state = {}  # user_id -> {"step": str, "data": dict}
 
-#@cantarellabots
 # =============================================================================
 # CALLBACK: Create Bot (entry point)
 # =============================================================================
